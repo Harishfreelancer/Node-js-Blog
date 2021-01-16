@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    add posts here!
+    <form method="post" action="/myroom/posts">
+        <input type="text" placeholder="type your post" name="post"/>
+        <button type="submit">Post</button>
+    </form>
+    <% if(myPosts){%>
+        <ul>
+            <%myPosts.map(value => {%>
+                <li><%=value%></li>
+            })%>
+        </ul>
+    <%}%>
+</body>
+</html>
