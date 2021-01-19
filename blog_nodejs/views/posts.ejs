@@ -11,12 +11,13 @@
         <input type="text" placeholder="type your post" name="post"/>
         <button type="submit">Post</button>
     </form>
-    <% if(myPosts){%>
+    <% if(posts){%>
         <ul>
-            <%myPosts.map(value => {%>
+            <%posts.map(value => {%>
                 <li><%=value%></li>
-            })%>
+            <%})%>
         </ul>
     <%}%>
+    <button><a href="/myroom">Back</a></button>
 </body>
 </html>

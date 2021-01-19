@@ -7,12 +7,12 @@ router.get("/",(req,res)=>{
     res.render("myroom",{name,room});
 })
 router.get("/posts",(req,res)=>{
-    res.render("posts");
+    res.render("posts",{posts});
 })
 router.post("/posts",(req,res)=>{
     const post = req.body.post;
-    const myPosts = posts.push(post);
-    console.log(post)
-    res.render("posts",{myPosts});
+     posts.push(post);
+    
+    res.render("posts",{posts});
 })
 module.exports = router;
