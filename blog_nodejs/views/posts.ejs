@@ -11,9 +11,9 @@
         <input type="text" placeholder="type your post" name="post"/>
         <button type="submit">Post</button>
     </form>
-    <% if(posts){%>
+    <% if(myposts){%>
         <ul>
-            <%posts.map(value => {%>
+            <%myposts.map(value => {%>
                 <li><%=value%></li>
             <%})%>
         </ul>
